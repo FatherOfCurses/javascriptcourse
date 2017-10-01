@@ -1,21 +1,66 @@
-
 <!DOCTYPE html>
 <html>
-<!-- Developed by Colin Principe September 20 2017 -->
+<!-- Developed by Colin Principe September 29 2017 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/JavaScript" src="displayEvens.js"></script>
+
 <head>
-<title>The Display Evens Happy Fun Page</title>
+    <title>The Display Evens Happy Fun Page</title>
 </head>
+<style>
+    ul {
+        list-style-type: none;
+    }
+</style>
+
 <body>
-    <!-- Draw form TODO: Make a pretty form page-->
-    <!-- Accept Input TODO: Act when user clicks DisplayEvens button-->
-    <!-- Error Handling TODO: Call Javascript functions nonNumericEntry, stepValueIsNotPositive, endingNumberLower-->
-    <!-- Populate Array TODO: Call Javascript function writeNumberToArray -->
-    <!-- Output TODO: figure out how to write an array to an HTML doc-->
+    <div class="container">
+        <h1>Display Even Numbers Calculator</h1>
+        <form name="evenStepper" action="#" method="post" class="form-horizontal" onsubmit="return validateItems();" onreset="resetForm();">
+            <div class="container">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" id="startingNumberLabel" for="startingNumber">Starting Number: </label>
+                    <div class="col-sm-5">
+                        <input type="Name" class="form-control" id="startingNumber" placeholder="Starting Number">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" id="endingNumberLabel" for="endingNumber">Ending Number: </label>
+                    <div class="col-sm-5">
+                        <input type="Name" class="form-control" id="endingNumber" placeholder="Enter Ending Number">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" id="stepValue" for="stepValue">Step Value: </label>
+                    <div class="col-sm-5">
+                        <input type="Name" class="form-control" id="stepValue" placeholder="Enter Step Value">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="form-group">
+                        <label class="col-sm-2"></label>
+                        <div class="col-sm-4">
+                            <button type="submit" id="submitButton" class="btn btn-default">Display Evens</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="container" style="margin:100px">
+        <span id="leadInSentence"></span><br/>
+        <span id="evenOutput"></span>
+    </div>
+
 </body>
+
 </html>
